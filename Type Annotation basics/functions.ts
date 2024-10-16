@@ -37,7 +37,7 @@ function rando(num: number){// Here in this case, this function will return stri
 }
 
 
-const add = (x: number, y: number): number{
+const add = (x: number, y: number): number => {
     return x+y;
 }
 
@@ -47,4 +47,20 @@ colors.map(color => { // TypeScript can figure it out the return type of the col
     color.toUpperCase();
 });
 
-cd
+const isLeapYear = (year: number): boolean => {
+    return (year % 4 === 0 && year % 100!== 0) || year % 400 === 0;
+}
+
+// // This works because square2 is hoisted
+// console.log(square2(3)); // Output: 9
+
+// // This throws an error because add is not hoisted
+// console.log(add(3, 4)); // Error: Cannot access 'add' before initialization
+
+// function square2(num: number): number {
+//     return num * num;
+// }
+
+// const add = (x: number, y: number): number => {
+//     return x + y;
+// }
